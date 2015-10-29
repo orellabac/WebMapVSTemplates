@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Home Page for $safeprojectname$</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link href="resources/site.css" rel="stylesheet" />
+    <script>
+        //This is to avoid the common error of navigating to the html page. This affects the location an some other functions
+        if (document.location.pathname.indexOf("resources") != -1) document.location = document.location.origin;
+    </script>
+    <script src="scripts/ie8polyfills.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery.blockUI.min.js"></script>
+    <script src="scripts/kendo.web.js"></script>
+    <script src="scripts/helpers/jquery.caret.js"></script>
+    <script src="scripts/helpers/kendo.listbox.js"></script>
+    <script src="scripts/helpers/WebMap.all.js"></script>
+    <script src="scripts/progress-polyfill.js"></script>
+    <link rel="stylesheet" href="resources/kendo.common.min.css" />
+    <link rel="stylesheet" href="resources/kendo.default.min.css" />
+
+    <script src="scripts/require.js"></script>
+    <script>
+            // Configure loading modules from the lib directory,
+            // except for 'app' ones, which are in a sibling
+            // directory.
+            requirejs.config({
+                baseUrl: './scripts',
+
+                paths: {
+                    "views" : "../resources/"
+                }
+            });
+    </script>
+    <script>
+        //Initialize app object
+        WebMap.Client.App.Init();
+        window.app = WebMap.Client.App.Current;
+        
+    </script>
+</head>
+<body>
+    <header></header>
+    <div id="body">
+        <script>
+            //Get current app state from server
+            $.ajax({
+                url: "WebMapViewManager/AppState",
+                success: function (data) {
+                    var state = data;
+                    //Setup state
+                    app.Init(state.M, state.V);
+                    window.app = app;
+                    $.unblockUI();
+                }
+            });
+        </script>
+        <!-- All Windows will be loaded into this div-->
+        <div id="mainContent"></div>
+    </div>
+    <footer></footer>
+
+</body>
+</html>

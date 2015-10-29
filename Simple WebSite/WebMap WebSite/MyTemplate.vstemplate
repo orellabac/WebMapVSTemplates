@@ -1,0 +1,57 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>WebMap WebSite</Name>
+    <Description>Started Template for a WebSite using WebMap </Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebMap WebSite</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="WebSite.csproj" ReplaceParameters="true">
+      <Folder Name="App_Code" TargetFolderName="App_Code">
+        <ProjectItem ReplaceParameters="true" TargetFileName="RegisterVirtualPathProvider.cs">RegisterVirtualPathProvider.cs</ProjectItem>
+      </Folder>
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FilterConfig.cs">FilterConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RouteConfig.cs">RouteConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Startup.Auth.cs">Startup.Auth.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AreaRegistration.cs">AreaRegistration.cs</ProjectItem>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <Folder Name="Models" TargetFolderName="Models" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="README.MD">README.MD</ProjectItem>
+      <Folder Name="resources" TargetFolderName="resources">
+        <ProjectItem ReplaceParameters="true" TargetFileName="error.html">error.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+      </Folder>
+      <Folder Name="scripts" TargetFolderName="scripts">
+        <Folder Name="helpers" TargetFolderName="helpers">
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.blockUI.d.ts">jquery.blockUI.d.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.caret.d.ts">jquery.caret.d.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery.d.ts">jquery.d.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="kendo.all.d.ts">kendo.all.d.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="require.d.ts">require.d.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="WebMap.all.d.ts">WebMap.all.d.ts</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
