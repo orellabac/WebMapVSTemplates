@@ -1,0 +1,22 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Form1</DefaultName>
+    <Name>WebMap Form</Name>
+    <Description>A simple web Map form</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>mobilize.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+	<CustomParameters>
+       <CustomParameter Name="$basename$" Value="$fileinputname$"/>
+    </CustomParameters>
+    <ProjectItem TargetFileName="scripts\$rootnamespace$.$fileinputname$.ts" ReplaceParameters="true">Form1.ts</ProjectItem>
+	<ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">Form1.cs</ProjectItem>
+	<ProjectItem TargetFileName="resources\$rootnamespace$.$fileinputname$.ts" ReplaceParameters="true">Form1.html</ProjectItem>
+	<ProjectItem TargetFileName="resources\$rootnamespace$.$fileinputname$.css" ReplaceParameters="true">Form1.css</ProjectItem>
+	<ProjectItem TargetFileName="Controllers\$rootnamespace$.$fileinputname$Controller.cs" ReplaceParameters="true">Form1Controller.cs</ProjectItem>
+	<ProjectItem TargetFileName="Models\$fileinputname$ViewModel.cs" ReplaceParameters="true">Form1ViewModel.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

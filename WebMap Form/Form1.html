@@ -1,0 +1,24 @@
+﻿<div data-width="400" data-height="400" name="$basename$" data-title="$basename$" id="#= UniqueID #">
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="col-md-5">
+                <div class="form-group required">
+                    <label for="inputName" class=" control-label">*Name</label>
+                    <input class="form-control" id="inputName" placeholder="Input Value for ClientName" data-bind="value: ClientName.Text" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label">*Email Address</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Input Value for Email for example johndoe@example.com" data-bind="value: ClientEmail.Text" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+
+                    <button type="button" class="btn btn-default" data-bind="events: { click: logic.button1_Click }"> Button1 </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
